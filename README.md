@@ -23,6 +23,14 @@ The Data downloaded will be provided as a zip-folder. In order to run the code c
 ### Note to the download
 The dowload might take a bit to start, as the query is first processed by the SMARD Website and then the wanted csv-files are generated and packed into the ZIP Folder. __Important__ to know is that the download was invalid if the name of the zip-folder is _export.zip_. It can happen, if so try again. The folder name has to be something like _Tabelle-Daten_ or _Table-Data_.
 
+### Manual Processing
+
+For some Poweplants a manual process is requires, as the Download from the SMARD Website is not readable.
+- __Kraftwerk_BASF-Ludwigshafen_Mitte__: There is a wrong paragraph, which needs to be removed so the Column is read in correctly. Be sure to have again a whitespace between the two words.
+- __Kraftwerk_BASF-Ludwigshafen_Süd__: There is a wrong paragraph, which needs to be removed so the Column is read in correctly. Be sure to have again a whitespace between the two words.
+- __Kraftwerk_Nossener_Brücke_Dresden__: There is a wrong paragraph, which needs to be removed so the Column is read in correctly. Be sure to have again a whitespace between the two words.
+
+
 ## Processing
 In the SMARD Date each Power Plant has their ow CSV-File, where the Power Plants listed come from the _Bundesnetzagetur_. In these CSV Files exists one column per Block, but not named consitently, which makes an automated matching of _EIC-ID_ and column difficult.
 Therefore a xlsx Table called _blocks.xlsx_ is used to process the Data, in which each block is listed with _EIC-ID_,_ETS-ID_, _Block Name_ and corresponding _filename_ as well as _Column Name_ in the smard Data. The _blocks.xlsx_ can be found in the input folder and was created by the INATECH Team.
