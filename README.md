@@ -32,10 +32,14 @@ For some Poweplants a manual process is requires, as the Download from the SMARD
 
 
 ## Processing
-In the SMARD Date each Power Plant has their ow CSV-File, where the Power Plants listed come from the _Bundesnetzagetur_. In these CSV Files exists one column per Block, but not named consitently, which makes an automated matching of _EIC-ID_ and column difficult.
+In the SMARD Date each Power Plant has their own CSV-File, where the Power Plants listed come from the _Bundesnetzagetur_. In these CSV Files exists one column per Block, but not named consitently, which makes an automated matching of _EIC-ID_ and column difficult.
 Therefore a xlsx Table called _blocks.xlsx_ is used to process the Data, in which each block is listed with _EIC-ID_,_ETS-ID_, _Block Name_ and corresponding _filename_ as well as _Column Name_ in the smard Data. The _blocks.xlsx_ can be found in the input folder and was created by the INATECH Team.
 
-With the _blocks_ Data the Data is processed and Converted in a way that each ETS-ID has their own file, named in the following pattern __{Plant Name}_{ETS_ID}_{Year}__, which makes it way easier to process afterwards. In these CSV Files the columns are Named with the EIC ID, which provides a consistend naming and good processing.
+With the _blocks_ Data the Data is processed and Converted in two ways.
+
+1. One long CSV-File per year which consists of two columns _EIC-ID_ and _Generation [MW]_ and as index a timestamp. So each EIC-ID has exacctly 8760 (8784) rows, one for each hour of the year.
+
+1. Each ETS-ID has their own file, named in the following pattern __{Plant Name}_{ETS_ID}_{Year}__, which makes it way easier to process afterwards. In these CSV Files the columns are Named with the EIC ID, which provides a consistend naming and good processing.
 
 The Notebook shows how exactly the Data is processed and can be used to understand the method. As well the Processed Data is already available for downloaded, saved in the _output_ Folder.
 
