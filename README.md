@@ -44,4 +44,4 @@ With the _blocks_ Data the Data is processed and Converted in two ways.
 The Notebook shows how exactly the Data is processed and can be used to understand the method. As well the Processed Data is already available for downloaded, saved in the _output_ Folder.
 
 ## License 
-Data provided from SMARD is Licensed under Creative Commons 4.0
+Data provided from SMARD is Licensed under Creative Commons Attributional 4.0 International. It is provided by the Bundesnetzagentur under https://www.smard.de/home/datennutzung 
